@@ -109,7 +109,7 @@ function App() {
       {/* Sidebar */}
       <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
         <div className="sidebar-header">
-          <img src="/logo.png" alt="Logo" className="sidebar-logo" />
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Logo" className="sidebar-logo" />
           <h2 className="sidebar-title">RecipeGPT</h2>
           <button className="sidebar-toggle-inside" onClick={() => setSidebarOpen(false)}>
             <Menu size={24} />
@@ -157,7 +157,7 @@ function App() {
               {messages.map((msg, idx) => (
                 <div key={idx} className={`chat-message ${msg.role}`}>
                   <div className={`avatar ${msg.role}`}>
-                    {msg.role === 'user' ? 'U' : <img src="/logo.png" alt="AI" className="chat-avatar-logo" />}
+                    {msg.role === 'user' ? 'U' : <img src={`${import.meta.env.BASE_URL}logo.png`} alt="AI" className="chat-avatar-logo" />}
                   </div>
                   <div className="message-content">
                     {/* Basic text rendering. Could add react-markdown later */}
@@ -170,7 +170,7 @@ function App() {
               {isLoading && (
                 <div className="chat-message assistant">
                   <div className="avatar assistant">
-                    <img src="/logo.png" alt="AI" className="chat-avatar-logo" />
+                    <img src={`${import.meta.env.BASE_URL}logo.png`} alt="AI" className="chat-avatar-logo" />
                   </div>
                   <div className="message-content loading-indicator">
                     Cooking up answer <div className="dot-flashing"></div>
