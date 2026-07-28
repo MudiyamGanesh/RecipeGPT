@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.env
+myenv/
+
+# Application Data
+recents/*.json
+!recents/.gitkeep
+
+# Node.js / React (Frontend)
+frontend/node_modules/
+frontend/dist/
+frontend/.npm/
+
+# OS Files
+.DS_Store
+Thumbs.db
